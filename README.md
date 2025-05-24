@@ -26,3 +26,6 @@ Este es un juego 2D desarrollado con Godot Engine 4, ambientado en un mercado me
 
 1. Clona este repositorio:
    git clone https://github.com/JonathanGr18/Juego_2d
+
+<img width="363" alt="image" src="https://github.com/user-attachments/assets/1e6c4fe7-c79e-4dcd-8463-13cea8904048" />
+<img width="241" alt="image" src="https://github.com/user-attachments/assets/0a3b404a-1228-4a41-8e0f-f0e55ef79673" />
