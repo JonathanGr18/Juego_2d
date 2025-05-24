@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://027pbyg03538"]
+
+[ext_resource type="Texture2D" uid="uid://bpolnmxqgy1pb" path="res://recursos/sprites/Jugador.png" id="1_8hr1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hr1h"]
+size = Vector2(17.75, 25.5)
+
+[node name="Jugador" type="CharacterBody2D"]
+position = Vector2(100, 200)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100, 100)
+scale = Vector2(0.117483, 0.109717)
+texture = ExtResource("1_8hr1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(100.75, 100)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8hr1h")
+
+[node name="Area2D" type="Area2D" parent="."]

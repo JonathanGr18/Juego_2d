@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3ddmi1l5uini"]
+
+[ext_resource type="Script" uid="uid://bk20gcqhlb03h" path="res://scripts/menu.gd" id="1_d7r87"]
+[ext_resource type="Texture2D" uid="uid://n68oslx38m7d" path="res://recursos/sprites/Fondo.png" id="1_vdanu"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d7r87")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 1536.0
+scale = Vector2(0.714635, 0.837489)
+texture = ExtResource("1_vdanu")
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 500.0
+offset_right = 400.0
+offset_bottom = 650.0
+scale = Vector2(1.53211, 1.62494)
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "¡Bienvenido al juego!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jugar"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

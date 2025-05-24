@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://t4qn67btnikd"]
+
+[ext_resource type="Script" uid="uid://bqindrjubgkdv" path="res://scripts/enemigo_alebrije.gd" id="1_2hjwx"]
+[ext_resource type="Texture2D" uid="uid://ckxr5kyrg8jfd" path="res://recursos/sprites/Alejibre.png" id="2_b6cwj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em3yk"]
+size = Vector2(165, 183)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6cwj"]
+size = Vector2(183, 195)
+
+[node name="EnemigoAlebrije" type="CharacterBody2D"]
+position = Vector2(0, -500)
+script = ExtResource("1_2hjwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.629012, 0.679087)
+texture = ExtResource("2_b6cwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.5, 18.5)
+shape = SubResource("RectangleShape2D_em3yk")
+
+[node name="Colision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colision"]
+position = Vector2(-15.5, 21.5)
+shape = SubResource("RectangleShape2D_b6cwj")
+
+[connection signal="body_entered" from="Colision" to="." method="_on_colision_body_entered"]
+[connection signal="body_entered" from="Colision" to="." method="_on_area_2d_body_entered"]
